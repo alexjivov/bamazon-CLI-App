@@ -1,13 +1,13 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 var b = "\n=====================\n";
-var query = "SELECT * FROM items";
+var query = "SELECT * FROM products";
 
 var connection = mysql.createConnection({
     host: "localhost",
     port: 3306, 
     user: "root",
-    password: "password",
+    password: "y685d90c",
     database: "bamazonDB",
 
 });
@@ -22,9 +22,9 @@ function itemList() {
         if (err) throw (err); 
         console.log("\nWelcome to Bamazon - The Online Store for Everything. What would you like to buy?\n")
         for (var i = 0; i < res.length; i++) {
-            console.log("ID: " + res[i].id + "    " + res[i].product_name + "   $" + res[i].price + "   Qty: " + res[i].qty); 
+            console.log("ID: " + res[i].id + "    " + res[i].product_name + "   $" + res[i].price + "   Qty: " + res[i].stock_quantity); 
         };
-        choosetem(); 
+        chooseItem(); 
      
     })
 }
@@ -88,11 +88,11 @@ function chooseItem() {
             console.log("Insufficient quantity, check back soon")
             setTimeout(whichItem, 2000)
         } else {
-            connection.query("UPDATE items SET ? WHERE ? ", 
+            connection.query("UPDATE products SET ? WHERE ? ", 
             [
             {
                 //is a string, need it to be 
-                qty: (results[pchoice].qty - phowMany),
+                stock_quantity: (results[pchoice].qty - phowMany),
                 product_sales: results[pchoice].product_sales + (phowMany * results[pchoice].price)
             },
             {
