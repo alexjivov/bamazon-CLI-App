@@ -6,8 +6,9 @@ As it is a CLI App, it has to be run from the command line. Additional functiona
 
 ![Test Image 1](initialScreenShot.png)
 
+The Customer can only buy products by ID and quantity. Any attempt at putting something invalid will cause a re-prompt.
+Attempting to enter a quantity over what is possible will result in an "Insufficient quanitity message. 
+
 ![Test Image 1](ScreenShot1.png)
 ![Test Image 1](ScreenShot2.png)
 
-The Customer can only buy products by ID and quantity. Any attempt at putting something invalid will cause a re-prompt.
-Attempting to enter a quantity over what is possible will result in an "Insufficient quanitity message. 
