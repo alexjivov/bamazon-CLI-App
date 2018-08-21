@@ -93,7 +93,7 @@ function chooseItem() {
             {
                 //is a string, need it to be 
                 stock_quantity: (results[pchoice].qty - phowMany),
-                product_sales: results[pchoice].product_sales + (phowMany * results[pchoice].price)
+            
             },
             {
                 id: pchoice
