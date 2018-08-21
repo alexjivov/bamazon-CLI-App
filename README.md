@@ -4,7 +4,7 @@ This is a CLI App focusing on node, mysql and express.
 
 As it is a CLI App, it has to be run from the command line. Additional functionality will be added in the future for managerial capability. 
 
-![Test Image 1](ScreenShot1.png)
+![Test Image 1](initialScreenShot.png)
 
 ![Test Image 1](ScreenShot1.png)
 ![Test Image 1](ScreenShot2.png)
